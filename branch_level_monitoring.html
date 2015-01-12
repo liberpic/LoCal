@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brach Level Monitoring | LoCal</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="shortcut icon" href="http://sdb.cs.berkeley.edu/sdb/sites/all/themes/corporateclean/favicon.ico" type="image/vnd.microsoft.icon" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+
+  <body>
+
+<!-- Top-Panel -->
+  <div class="top-panel">
+    <!-- change the color of the background to black instead of the default white 
+         if use the same color as the navigation bar, how to make a line between them-> set the border-bottom-style to be solid, and the change the width and color of the border. -->
+    <div style="background-color:#dcdcdc; color:#000000; text-align:center; padding-top:2rem; padding-bottom:2rem;">
+      <!-- SDB image, click and goes to home(sdb) -->
+      <a href="index.html"> 
+        <img src="files/local_logo.png" height="123" width="216">  </a>
+      <!-- <img src="http://sdb.cs.berkeley.edu/sdb/sites/default/files/logo%20vector_2.png" height="123" width="216"> -->
+      <div class="top-panel-text" align="center">
+        LoCal - A Network Architecture for Localized Electrical Energy Reduction, Generation and Sharing
+      </div>
+    </div>
+  </div>
+<!-- End of Top-Panel -->
+
+<!--Navigation Bar -->
+  <div class="contain-to-grid sticky" data-options="sticky_on: large">
+   <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="index.html">Home</a>
+        </h1>
+      </li>
+    </ul>
+ 
+    <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="projects.html">Projects</a>
+          <ul class="dropdown">    
+            <li><a href="local_cluster.html">LoCal Cluster</a></li>
+            <li><a href="#">LoCal Control (IPS)</a></li>
+            <li><a href="data_schema.html">Data Schema/Service Discovery</a></li>
+            <li><a href="https://code.google.com/p/smap-data/">sMAP 2.0 Project</a></li>
+            <li><a href="cory_hall_monitoring.html">Cory Hall Monitoring</a></li>
+            <li><a href="#">LBNL B90 Monitoring</a></li>
+            <li><a href="branch_level_monitoring.html">Branch level Monitoring</a></li>
+            <li><a href="green_ganglia.html">Green Ganglia</a></li>
+            <li><a href="#">Slack Analysis</a></li>
+            <li><a href="#">Flywheel Storage</a></li>
+            <li><a href="#">Penetration of Renewables</a></li>
+            <li><a href="energy_visualization.html">Energy Visualization Mobile Application</a></li>
+            <li><a href="google_driver.html">Google PowerMeter ACmeX2 Driver</a></li>
+            <li><a href="http://is4server.com/">StreamFS</a></li>
+            <li><a href="undergrad_research.html">Undergrad Research Activities</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>  
+        <li><a href="events.html">Events</a></li>
+        <li class="divider"></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li class="divider"></li>
+        <li><a href="people.html">People</a></li>
+        <li class="divider"></li>
+        <li><a href="publications.html">Publications</a></li>
+
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Quick Links</a>
+          <ul class="dropdown">
+            <li><a href="http://local.cs.berkeley.edu/wiki2/index.php/Main_Page/">LoCal Wiki</a></li>
+            <li><a href="http://sdb.cs.berkeley.edu/">SDB</a></li>
+            <li><a href="http://new.openbms.org/plot/">sMAP</a></li>
+            <li><a href="http://www.cs.berkeley.edu/">Computer Science</a></li>
+            <li><a href="http://www.berkeley.edu/">UC Berkeley</a></li>
+          </ul>
+        </li>
+
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Partners</a>
+          <ul class="dropdown">
+            <li><a href="http://aws.amazon.com/">Amazon Web Services</a></li>
+            <li><a href="http://www.energy.ca.gov/">California Energy Commission</a></li>
+            <li><a href="https://www.src.org/program/fcrp/">Focus Center Research Program</a></li>
+            <li><a href="http://www.fujitsu.com/">Fujitsu</a></li>
+            <li><a href="http://www.intel.com/content/www/us/en/homepage.html">Intel</a></li>
+            <li><a href="http://www.keti.re.kr/e-keti/">KETI</a></li>
+            <li><a href="http://www.lbl.gov/">Lawrence Berkeley National Laboratory</a></li>
+            <li><a href="http://www.musyc.org/">The Multiscale Systems Center</a></li>
+            <li><a href="http://www.nsf.gov/">National Science Foundation</a></li>
+            <li><a href="http://www.nokia.com/">Nokia</a></li>
+            <li><a href="http://www.samsung.com/us/">Samsung</a></li>
+            <li><a href="http://www.siemens.com/entry/cc/en/">Siemens</a></li>
+            <li><a href="http://www.energy.gov/">Energy.Gov</a></li>
+          </ul>
+        </li>
+      </section>
+      <!-- Right Nav Section -->
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><a href="search.html">Search</a></li>
+          <li class="divider"></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <!-- End Nav Section -->
+
+  <div class="panel" style="background-color:#F5F5F5; margin-bottom:-2em">
+    <div class="row">
+      <!-- Content Part -->
+      <div class="large-9 columns" style="padding-top:1rem;">
+        <h1>Branch level monitoring</h1><br><br>
+        <h3>Introduction</h3><hr>
+        <p>Branch-level power monitoring is to instrument the power usage at a circuit breaker level.
+        While power usage at a branch-level can be measured by reading the output current of
+        a current transformer wound around a circuit breaker wire, the complexity of deployment
+        increases when we are to measure the power usage of an electric panel of a building
+        which contains tens of circuit breakers. This problem has been well addressed by commercial level panel monitoring instruments such as Veris E30. Veris E30 reads the current of multiple circuit breakers using a current-transformer array, processes the sampled data, and provides it over the RS485 serial bus using Modbus RTU protocol. While this can be a reasonable solution to monitor a few Veris E30 devices, but it is not scalable because it requires wiring over RS485 serial bus and interfacing to an RS485 master (e.g. PC that interfacts over RS485 bus). A better approach is to utilize the infrastructure of the Internet, which allows us to monitor and control the panel level instrument over the Internet and to scale over the LAN infrastructure in a building.</p>
+
+        <br><br>
+
+        <h3>Status</h3><hr>
+          <ul style="margin-left:2em;">
+            <li>Veris E30 is installed for the electrical panel that covers the half the area of RAD lab in Soda Hall. As of now we monitor the voltage and the current of each circuit breaker. In the next scheduled electrical work, we plan to add instruments to measure the current of the mains, where all the circuit-breaker wires in the panel is from.</li>
+            <li>A working C library and client application that sends a command and receives the data from the Veris E30 device.</li>
+            <li>A working web service over the C library is written and is installed in a server machine link</li>
+          </ul>
+
+        <br><br>
+
+        <h3>Related Document</h3><hr>
+          <ul style="margin-left:2em;"><li>Application Protocol for Veris E30 Panel-board Monitoring System PDF : A technical report on initial deployment of Veris E30 panel-board monitoring board and description on TCP/IP interface that wraps the low-level MODBUS interface of Veris E30.</li></ul>
+
+      
+      </div>   
+      <!-- Side Nav -->
+      <div class="large-3 columns" style="padding-top:1rem;">
+        
+
+          <div class = "custom-panel">
+
+          <ul class="side-nav" align="center">
+            <li align="left"><h2><b>Partners</b></h2></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://aws.amazon.com"><img src="files/partners/amazon.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.energy.ca.gov"><img src="files/partners/CSEC.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="https://www.src.org/program/fcrp/"><img src="files/partners/FCRP.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.fujitsu.com/"><img src="files/partners/fujitsu.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.intel.com"><img src="files/partners/intel.gif" border="0" width="75" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.keti.re.kr/e-keti/"><img src="files/partners/keti.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.lbl.gov"><img src="files/partners/LBL.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.musyc.org/"><img src="files/partners/MuSyC.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.nsf.gov"><img src="files/partners/NSF.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.nokia.com/"><img src="files/partners/nokia.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.samsung.com"><img src="files/partners/samsung.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.siemens.com"><img src="files/partners/siemens.gif" border="0" width="60" /></a></li>
+            <li class="custom_divider"></li>
+            <li><a href="http://www.doe.gov"><img src="files/partners/USDoE.gif" border="0" width="60" /></a></li>
+           </ul>
+           </div> 
+        </div>
+        <div class="large-12 columns">
+          
+        </div>
+    </div>      
+    <br><br><br><hr><br>
+
+
+
+
+
+
+
+  </div>
+
+
+
+<!-- bottom panel -->
+
+      
+
+  <div class="bott-panel">
+    <div style="background-color:#F5F5F5;padding-top:1rem">
+      <dic class="bott-panel-text">
+        <div class="row">
+          <div class="large-11 columns">
+            <p style="color:#000000; font-size:13px">This material is based upon work supported by the National Science Foundation under grants CPS-1239552, and the NSF Graduate Research Fellowship Program. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+            </p>
+          </div>
+
+          <div class="large-1 columns">
+            <img src="files/partners/NSF.gif" align="right">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  
+  </body>
+</html>
